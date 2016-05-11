@@ -1,0 +1,21 @@
+###
+# Запускаем конвертер входного файла %i в эскиз %o формата PNG с максимальным размером %sx%s.
+#
+# Краткая справка:
+#     convert или /usr/bin/convert — имя программы конвертации ImageMagick;
+#     %i — сюда система подставляет имя исходного файла;
+#     -flatten — слить все слои в один (иначе каждый слой превратится в отдельную картинку);
+#     -thumbnail — уменьшить изображение до заданных пределов;
+#     %sx%s — предел размера (сюда система подставляет максимальный размер эскизов, например 256x256);
+#     png: — выходной формат;
+#     %o — сюда система подставляет имя выходного файла;
+#     image/vnd.adobe.photoshop;image/psd;image/x-psd — список MIME-типов для файлов Photoshop.
+#
+# @author MaximAL
+# @link http://maximals.ru/notes/2015/03/16/photoshop-psd-thumbs-linux/
+# @since 2015-03-16
+###
+
+[Thumbnailer Entry]
+Exec=/usr/bin/convert %i -flatten -thumbnail %sx%s png:%o
+MimeType=image/vnd.adobe.photoshop;image/psd;image/x-psd;
