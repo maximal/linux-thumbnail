@@ -13,9 +13,10 @@
 #
 # @author MaximAL
 # @link http://maximals.ru/notes/2015/03/16/photoshop-psd-thumbs-linux/
+# @since 2016-10-14 Добавлен тип `image/x-xcf` для файлов Gimp
 # @since 2015-03-16
 ###
 
 [Thumbnailer Entry]
 Exec=/usr/bin/convert %i -flatten -thumbnail %sx%s png:%o
-MimeType=image/vnd.adobe.photoshop;image/psd;image/x-psd;
+MimeType=image/vnd.adobe.photoshop;image/psd;image/x-psd;image/x-xcf;
